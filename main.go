@@ -11,7 +11,7 @@ import (
 // func must be able take user input and save it
 // func must be show all saved user notes
 // must be able to delete notes
-// program should exit when user select to quit option.
+// program should exit when user select to quit option
 
 type Notes struct {
 	id    int
@@ -51,18 +51,14 @@ func toDoList() {
 
 		UserInput := scanner()
 		// reader := bufio.NewReader(os.Stdin)
-
 		// userInput, _ := reader.ReadString('\n')
-
 		// userInput = strings.Replace(userInput, "\n", "", -1)
-
 		//Selected, _ := strconv.Atoi(userInput)
 
 		switch UserInput {
 		case "1":
 			fmt.Println("You selected to write a New Note to List")
 			addNote()
-
 		case "2":
 			fmt.Println("You selected to See Your ToDo List")
 			showNotes()
@@ -83,10 +79,10 @@ func toDoList() {
 func addNote() {
 
 	fmt.Println("Enter Title")
-	fmt.Print("-->")
+	fmt.Print("--> ")
 	Title := scanner()
 	fmt.Println("Enter Text")
-	fmt.Print("-->")
+	fmt.Print("--> ")
 	Text := scanner()
 
 	new := Notes{
@@ -96,7 +92,7 @@ func addNote() {
 	}
 
 	Notelist = append(Notelist, new)
-	fmt.Println("User Notes saved ...")
+	fmt.Println("User Notes saved to toDoList...")
 }
 
 func showNotes() {
